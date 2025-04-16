@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+    const int size = 3;
+    char arr[size];
+    int left = 0;
+    int right = size - 1;
+    for(int i = 0; i< size; ++i){
+        scanf(" %c", &arr[i]);
+    }
+    for(int j = 0; j < size; j++){
+        printf("%c",arr[j]);
+    }
+    printf("\n");
+    while(left < right){
+        char tmp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = tmp;
+        ++left;
+        --right;
+    }
+    for(int i = 0; i < size; ++i){
+        printf("%c",arr[i]);
+    }
+    return 0;
+
+}   
