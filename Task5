@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main(){
+    int arr1[] = {1,2,3,4};
+    int arr2[] = {1,2,3,4};
+    for(int i = 0; i < 4; ++i){
+        if(arr1[i] != arr2[i]){
+            printf("nuyny chen:\n");
+            return 0;
+        }
+    }
+    printf("nuyn en:\n");
+    return 0;
+}
