@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main(){
+    int arr[] = {1,5,5,7,7,2,2};
+    int left = 0;
+    int right = 6;
+    while(left < right){
+        int index = left + (right -left)/2;
+        if(index % 2 == 0){
+            if(arr[index] == arr[index + 1]){
+                left = index + 2;
+            }else{
+                right = index;
+            }
+        }else{
+            if(arr[index] == arr[index - 1]){
+                left = index + 1;
+            }else{
+                right = index;
+            }
+        }
+    }
+    printf("result: %d\n",arr[left]);
+    return 0;
+}
